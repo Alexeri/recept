@@ -1,3 +1,9 @@
+:root {
+  --red: #a10000;
+  --bg-main: #e3b3b3;
+  --bg-light: #fcfcfc;
+  --gray-light: #ebebeb;
+}
 *,
 *::before,
 *::after {
@@ -16,7 +22,7 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 .pageWrapper {
-  background-color: #e3b3b3;
+  background-color:  var(--bg-main);
   padding-bottom: 64px;
 }
 .container {
@@ -32,18 +38,18 @@ body {
   width: 100%;
 }
 .recipeContainer {
-  background-color: #fcfcfc;
+  background-color: var(--bg-light);
   padding: 64px;
 }
 .recipeTitle {
-  color: #a10000;
+  color: var(--red);
   font-size: 40px;
   font-weight: 700;
 }
 .recipeDescription {
   margin: 32px 0;
   padding: 24px;
-  background-color: #ebebeb;
+  background-color: var(--gray-light);
   font-size: 24px;
 }
 .recipeSubtitle {
@@ -52,9 +58,11 @@ body {
 }
 .recipePortions {
   font-weight: 500;
+  margin-left:16px;
 }
 .recipeIngredientsList {
-  list-style-position: inside;
+  list-style-position: outside;
+  padding-left: 2rem;
   margin-top: 11px;
   font-size: 24px;
 }
@@ -63,7 +71,8 @@ body {
 }
 .recipeStepsList {
   margin-top: 14px;
-  list-style-position: inside;
+  list-style-position: outside;
+  padding-left: 2rem;
   font-size: 24px;
 }
 .recipeImages {
@@ -89,6 +98,10 @@ body {
   }
   .recipeImage {
     max-width: 100%;
+  }
+  .recipePortions {
+    display: block;
+    margin-left:0;
   }
 }
 @media (max-width: 1280px) {
