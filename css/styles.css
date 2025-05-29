@@ -3,6 +3,9 @@
   --bg-main: #e3b3b3;
   --bg-light: #fcfcfc;
   --gray-light: #ebebeb;
+  --font-lg: 1.5rem; 
+  --font-xl: 2rem;    
+  --font-xxl: 2.5rem;
 }
 *,
 *::before,
@@ -14,98 +17,110 @@ h1,
 h2,
 ul,
 ol,
-p {
+p,
+figure {
   margin: 0;
   padding: 0;
 }
 body {
   font-family: "Open Sans", sans-serif;
+  background-color: var(--bg-main);
+  padding-bottom: 4rem;
 }
-.pageWrapper {
-  background-color:  var(--bg-main);
-  padding-bottom: 64px;
-}
-.container {
+.main-content {
   margin: 0 auto;
   max-width: 1280px;
 }
-.headerImageContainer {
+
+.recipe-cover {
   height: 500px;
+  background-image: url("/images/pancake1.jpg");
+  background-size: cover;
+  background-position: center;
 }
-.headerImage {
-  object-fit: cover;
-  height: 500px;
-  width: 100%;
-}
-.recipeContainer {
+
+.recipe-container {
   background-color: var(--bg-light);
-  padding: 64px;
-}
-.recipeTitle {
-  color: var(--red);
-  font-size: 40px;
-  font-weight: 700;
-}
-.recipeDescription {
-  margin: 32px 0;
-  padding: 24px;
-  background-color: var(--gray-light);
-  font-size: 24px;
-}
-.recipeSubtitle {
-  font-size: 32px;
-  font-weight: 700;
-}
-.recipePortions {
-  font-weight: 500;
-  margin-left:16px;
-}
-.recipeIngredientsList {
-  list-style-position: outside;
-  padding-left: 2rem;
-  margin-top: 11px;
-  font-size: 24px;
-}
-.recipeSteps {
-  margin-top: 32px;
-}
-.recipeStepsList {
-  margin-top: 14px;
-  list-style-position: outside;
-  padding-left: 2rem;
-  font-size: 24px;
-}
-.recipeImages {
-  margin-top: 32px;
-}
-.recipeImagesContainer {
-  margin-top: 20px;
+  padding: 4rem;
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  gap: 2rem;
+}
+.recipe-header {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.recipe-title {
+  color: var(--red);
+  font-size: var(--font-xxl);;
+  font-weight: 700;
+}
+
+.recipe-description {
+  padding: 1.5rem;
+  background-color: var(--gray-light);
+  font-size: var(--font-lg);;
+}
+
+.recipe-subtitle {
+  font-size: var(--font-xl);;
+  font-weight: 700;
+}
+
+.recipe-portions {
+  font-weight: 500;
+  margin-left: 1rem;
+}
+.recipe-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.recipe-list {
+  list-style-position: outside;
+  padding-left: 2rem;
+  font-size: var(--font-lg);;
+}
+
+.recipe-images-container {
+  display: flex;
+  gap: 1.5rem;
   width: 100%;
 }
-.recipeImage {
-  max-width: calc(50% - 12px);
+.recipe-image-wrapper{
+  flex: 1;
+}
+
+.recipe-image {
+  width: 100%;
   height: 467px;
   object-fit: cover;
 }
+
 @media (max-width: 768px) {
-  .recipeContainer {
-    padding: 64px 32px;
+  .recipe-container {
+    padding: 4rem 2rem;
   }
-  .recipeImagesContainer {
+
+  .recipe-images-container {
     flex-direction: column;
   }
-  .recipeImage {
+
+  .recipe-image {
     max-width: 100%;
   }
-  .recipePortions {
+
+  .recipe-portions {
     display: block;
-    margin-left:0;
+    margin-left: 0;
   }
 }
+
 @media (max-width: 1280px) {
-  .pageWrapper {
-    padding-bottom: 0px;
+  .page-wrapper {
+    padding-bottom: 0;
   }
 }
